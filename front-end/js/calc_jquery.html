@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Calc JQuery</title>
+        <link rel="stylesheet" href="calc.css">
+    </head>
+    <body>
+        <h2 id="message">Calculator</h2>  
+        <input id="oper1" type="number" placeholder="Enter 1st operand"/>
+        <input id="oper2" type="number" placeholder="Enter 2nd operand"/>
+        <button class="as" id="addbtn" onclick="add()"> + </button>
+        <button class="as" id="subbtn" onclick="sub()"> - </button>
+        <button id="mulbtn" onclick="sub()"> * </button>
+        <p class="as" id="result"></p>
+        <p id="result">use this calc for addition/sub</p>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            function add(){
+                // var result = 
+                $('#result').text(parseInt($('#oper1').val()) + parseInt($('#oper2').val()) )
+                // var oper1 = document.getElementById('oper1').value;
+                // var oper2 = document.getElementById('oper2').value;
+                // var result = parseInt(oper1) + parseInt(oper2);
+                // console.log(result)
+                // document.getElementById('result').innerText = 'Result is  ' + result
+            }
+            function sub(){
+                $('#result').text($('#oper1').val() - $('#oper2').val())
+                // var oper1 = document.getElementById('oper1').value;
+                // var oper2 = document.getElementById('oper2').value;
+                // var result = parseInt(oper1) - parseInt(oper2);
+                // console.log(result)
+                // document.getElementById('result').innerText = 'Result is  ' + result
+            }
+        </script>
+    </body>
+</html>

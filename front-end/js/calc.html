@@ -7,15 +7,8 @@
         <input id="oper1" type="number" placeholder="Enter 1st operand"/>
         <input id="oper2" type="number" placeholder="Enter 2nd operand"/>
         <button onclick="add()"> + </button>
+        <button onclick="sub()"> - </button>
         <p id="result"></p>
-        <script>
-            function add(){
-                var oper1 = document.getElementById('oper1').value;
-                var oper2 = document.getElementById('oper2').value;
-                var result = parseInt(oper1) + parseInt(oper2);
-                console.log(result)
-                document.getElementById('result').innerText = 'Result is  ' + result
-            }
-        </script>
+        <script src="calc.js"></script>
     </body>
 </html>

@@ -1,0 +1,21 @@
+/* #addbtn {
+    background-color: coral;
+}
+
+#subbtn {
+    background-color: blueviolet;
+} */
+/* 
+button{
+    background-color: gray;
+} */
+
+.as {
+    background-color: blue;
+}
+
+p{
+    border : 1px solid black;
+    padding:  50px;
+    font: italic 30px "Times New Roman", "Times"
+}
