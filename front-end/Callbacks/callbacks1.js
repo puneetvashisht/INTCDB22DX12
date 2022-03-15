@@ -10,9 +10,19 @@
 // A high-order function is a function that accepts another function 
 // as an argument.
 
+// let fun = function sum(a, b){
+//   return a+b;
+// }
+
+// function fun1(){
+//   console.log(fun(3,4))
+//   return function(){
+//     console.log("Anything..")
+//   };
+// }
 
 
-
+// fun1(fun);
 
 
 // Example-1
@@ -126,7 +136,7 @@
 
 // let url = 'https://www.learnObytes.com/pic.jpg';
 
-// download(url);  // 1st operation  --> Time Consuming
+// download(url);  // 1st operation  --> Time Consuming  --> Not blocking the further execution
 // process(url);   // 2nd operation
 
 
@@ -145,7 +155,7 @@ function download(url, callback) {
         
         // process the picture once it is completed
         callback(url);
-    }, 1000);
+    }, 3000);
 }
 
 function process(picture) {

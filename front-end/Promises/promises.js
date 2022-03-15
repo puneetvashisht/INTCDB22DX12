@@ -21,7 +21,7 @@
 //       { username: 'john', email: 'john@test.com' },
 //       { username: 'jane', email: 'jane@test.com' },
 //     ]);
-//   }, 1000);
+//   }, 2000);
 // }
 
 // function findUser(username, callback) {
@@ -57,7 +57,6 @@
 //     // executor code. // It may be a network request.
 // })
 
-// lines of code 
 
 
 
@@ -68,13 +67,13 @@
 //     data = 3;
 //     error = "Operation was unsuccessful"
 //     // Some Operation ........ 
-    
-//     let success = true;  // The value of success is based on the success of above operation.
+//     // Some lines of code..
+//     let success = false;  // The value of success is based on the success of above operation.
 
 
 //     // Lines below returns the state of the promise object.
 //     if (success) {
-//       resolve(data);
+//       resolve(data);  // Promise is resolved
 //     } else {
 //       reject(error);
 //     }
@@ -89,32 +88,32 @@
 
 // Consuming a Promise: Using then(), catch() methods.
 
-let success = false;       // Flag ==> Make it false for simulating the rejection.
+// let success = false;       // Flag ==> Make it false for simulating the rejection.
 
-function getUsers() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (success) {
-        resolve([
-          { username: 'john', email: 'john@test.com' },
-          { username: 'jane', email: 'jane@test.com' },
-        ]);
-      } else {
-        reject('Failed to get the user list because of down server');
-      }
-    }, 1000);
-  });
-}
+// function getUsers() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (success) {
+//         resolve([
+//           { username: 'john', email: 'john@test.com' },
+//           { username: 'jane', email: 'jane@test.com' },
+//         ]);
+//       } else {
+//         reject('Failed to get the user list because of down server');
+//       }
+//     }, 5000);
+//   });
+// }
 
-const promise = getUsers();
+// const promise = getUsers();
+
+// // console.log(promise)
+
+// promise.then((users) => {
+//     console.log(users);
+//   })
 
 
-
-promise.then((users) => {
-    console.log(users);
-  })
-
-
-promise.catch((error) => {
-  console.log(error);
-});
+// promise.catch((error) => {
+//   console.log(error);
+// });
