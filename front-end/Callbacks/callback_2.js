@@ -17,4 +17,3 @@ setTimeout(() => console.log("Second Execution"), 3000)  // Time Consuming
 console.log("Third Execution")
 
 console.log("Fourth Execution")
-
