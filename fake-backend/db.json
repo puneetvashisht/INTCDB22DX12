@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Angular",
+      "summary": "Framework from Google"
+    },
+    {
+      "id": 4,
+      "title": "VueJS",
+      "summary": "Open Source Framework"
+    }
+  ]
+}
