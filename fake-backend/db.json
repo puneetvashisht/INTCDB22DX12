@@ -3,12 +3,12 @@
     {
       "id": 1,
       "title": "Angular",
-      "summary": "Framework from Google"
+      "summary": "Framework from google"
     },
     {
-      "id": 4,
-      "title": "VueJS",
-      "summary": "Open Source Framework"
+      "id": 2,
+      "title": "React",
+      "summary": "Library from facebook"
     }
   ]
 }
