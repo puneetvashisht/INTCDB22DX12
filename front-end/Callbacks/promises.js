@@ -22,17 +22,20 @@
 console.log('starting...');
 
 // non - blocking
-function foo(fn){
-    setTimeout(()=>{
-        console.log(fn)
-        console.log('function foo');
-        fn("success")
-    }, 5000)
+function foo(){
+    return new Promise((resolve, reject)=> {
+        setTimeout(()=>{
+            console.log('function foo');
+            reject("failure")
+        }, 5000)
+    })
 }
 
 // let result = foo();
 // console.log(result);
 
-foo((result)=> console.log(result))
+foo()
+.then(result => console.log(result))
+.catch(err=> console.log('Err:' ,err))
 
 console.log('finishing...')
