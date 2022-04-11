@@ -2,18 +2,18 @@ import logo from "./logo.svg";
 import "./App.css";
 import Message from "./Message";
 import Badge from "./Badge";
-import Card from "./card";
-import View_Courses from "./View_Courses";
+import Card from "./Card";
+import ViewCoures from "./ViewCoures";
 
 function App() {
   return (
     <div className="container">
-      <View_Courses />
-      {/* <Card title="Angular" />
-      <Card title="React" /> */}
       {/* <Message></Message>
       <Badge caption="Inbox"></Badge>
       <Badge caption="Sent"></Badge> */}
+      {/* <Card title="Angular"></Card>
+      <Card title="React"></Card> */}
+      <ViewCoures></ViewCoures>
     </div>
   );
 }
