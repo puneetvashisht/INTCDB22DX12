@@ -3,7 +3,8 @@ import "./App.css";
 import Message from "./Message";
 import Badge from "./Badge";
 import Card from "./Card";
-import ViewCoures from "./ViewCoures";
+import View_Coures from "./View_Courses";
+import AddCourses from "./AddCourses";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Badge caption="Sent"></Badge> */}
       {/* <Card title="Angular"></Card>
       <Card title="React"></Card> */}
-      <ViewCoures></ViewCoures>
+      <AddCourses />
+      <View_Coures></View_Coures>
     </div>
   );
 }

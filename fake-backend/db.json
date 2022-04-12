@@ -1,19 +1,14 @@
 {
   "courses": [
     {
-      "title": "React",
-      "summary": "jklgdss dgkld g",
-      "id": 2
-    },
-    {
-      "title": "Ember",
-      "summary": "sdgds",
-      "id": 3
-    },
-    {
+      "id": 1,
       "title": "Angular",
-      "summary": "sdgds",
-      "id": 4
+      "summary": "Framework from Google"
+    },
+    {
+      "id": 2,
+      "title": "React",
+      "summary": "Library from FaceBook"
     }
   ]
 }
