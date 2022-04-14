@@ -1,11 +1,28 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function UpdateCourse() {
   let params = useParams();
+  let navigate = useNavigate();
 
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState(params.title);
   const [summary, setSummary] = useState("");
+
+  const updateCourse = () => {
+    fetch("http://localhost:8000/courses/" + params.id, {
+      method: "PATCH",
+      body: JSON.stringify({ summary }),
+      headers: {
+        "content-type": "application/json",
+      },
+    }).then((res) => {
+      if (res.status >= 400) {
+        console.log("Course Updatation Failed");
+      } else {
+        navigate("/");
+      }
+    });
+  };
 
   return (
     <div>
@@ -15,6 +32,7 @@ export default function UpdateCourse() {
           className="form-control"
           id="floatingInput"
           placeholder="title"
+          disabled
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -31,7 +49,9 @@ export default function UpdateCourse() {
         />
         <label htmlFor="floatingPassword">Enter Summary</label>
       </div>
-      <button className="btn btn-primary mb-5">Add Course</button>
+      <button className="btn btn-primary mb-5" onClick={updateCourse}>
+        Update Course
+      </button>
     </div>
   );
 }
