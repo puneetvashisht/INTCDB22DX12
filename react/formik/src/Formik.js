@@ -40,7 +40,9 @@ export default function FormikForm() {
 
   function validateName(value) {
     let error;
-    if (value === "admin" || value === "Admin") {
+    if (!value) {
+      error = "Required";
+    } else if (value === "admin" || value === "Admin") {
       error = "Admin cannot be the name!";
     }
     return error;
