@@ -18,6 +18,7 @@ export default function AddEmployee() {
       .then((res) => console.log(res));
   };
 
+
   const handleNameChange = (e) => {
     let nameValue = e.target.value;
     if (nameValue && nameValue.length > 3) {

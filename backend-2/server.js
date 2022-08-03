@@ -48,12 +48,22 @@ app.get('/productjson', async (req, res)=>{
 
 app.get('/product', async (req, res)=>{
     const products = await Product.find();
-    // res.json(products)
-    res.render('product', {products})
+    res.json(products)
+    // res.render('product', {products})
+})
+
+app.get('/product/:title', async (req, res)=>{
+    console.log(req.params.title);
+    const product = await Product.findOne({title: req.params.title})
+    res.json(product)
+    // res.render('product', {products})
 })
 
 app.get('/test', (req, res) => {
-    res.render('product', { title: 'Hey', message: 'Hello there!' })
+    // res.send('Hello world!');
+    // res.end();
+    // res.render('product', {products: [{ title: 'Hey', message: 'Hello there!' }]})
+    res.json({success:  true})
   })
 
 
